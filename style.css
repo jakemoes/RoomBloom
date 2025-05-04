@@ -39,16 +39,7 @@ body {
     text-decoration: underline;
   }
 
-  .lang-link {
-    float: right;
-    margin: 20px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    background-color: #0070f3;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-  }
+
 
   .hidden {
     display: none;
