@@ -1,38 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy - [Your App Name]</title>
+  <title>Datenschutzerklärung – Room Bloom</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Privacy Policy</h1>
-    <h3>Room Bloom</h3>
-    <p>Effective Date: May 4, 2025</p>
+    <button class="lang-toggle" onclick="toggleLanguage()">Switch to English</button>
 
-    <h2>1. Introduction</h2>
-    <p>We respects your privacy. This Privacy Policy explains how we collect, use, and share your personal information when you use our app.</p>
+    <!-- Deutsch -->
+    <div id="de">
+      <h1>Datenschutzerklärung</h1>
+      <h3>Room Bloom</h3>
+      <p>Gültig ab: 4. Mai 2025</p>
 
-    <h2>2. Information We Collect</h2>
-    <ul>
-      <li>Device information (model, OS version)</li>
-      <li>App usage data (crash logs, interactions)</li>
-      <li>Any optional data you provide, such as through feedback forms</li>
-    </ul>
+      <h2>1. Einführung</h2>
+      <p>Room Bloom respektiert Ihre Privatsphäre. Diese Datenschutzerklärung beschreibt, wie wir Ihre personenbezogenen Daten erfassen, verwenden und weitergeben, wenn Sie unsere App nutzen.</p>
 
-    <h2>3. How We Use Your Information</h2>
-    <p>We use the information to improve app performance, fix bugs, and understand how users interact with the app. We do not sell or share your data with third parties.</p>
+      <h2>2. Welche Daten wir erfassen</h2>
+      <ul>
+        <li>Geräteinformationen (Modell, Betriebssystemversion)</li>
+        <li>Nutzungsdaten der App (Absturzberichte, Interaktionen)</li>
+        <li>Alle optionalen Daten, die Sie uns z. B. über Feedback-Formulare bereitstellen</li>
+      </ul>
 
-    <h2>4. Data Security</h2>
-    <p>We take reasonable measures to protect your data, including encryption and secure transmission.</p>
+      <h2>3. Wie wir Ihre Daten verwenden</h2>
+      <p>Wir verwenden Ihre Daten, um die Leistung der App zu verbessern, Fehler zu beheben und das Nutzerverhalten zu analysieren. Wir verkaufen oder teilen Ihre Daten nicht mit Dritten.</p>
 
-    <h2>5. Your Rights</h2>
-    <p>You may request to access, update, or delete your data at any time by contacting us.</p>
+      <h2>4. Datensicherheit</h2>
+      <p>Wir ergreifen angemessene Maßnahmen zum Schutz Ihrer Daten, einschließlich Verschlüsselung und sicherer Übertragung.</p>
 
-    <h2>6. Contact Us</h2>
-    <p>If you have questions or concerns, contact us at: <a href="jake.moe@icloud.com">jake.moe@icloud.com</a></p>
+      <h2>5. Ihre Rechte</h2>
+      <p>Sie können jederzeit verlangen, dass wir Ihre Daten einsehen, aktualisieren oder löschen.</p>
+
+      <h2>6. Kontakt</h2>
+      <p>Bei Fragen oder Bedenken kontaktieren Sie uns unter: <a href="mailto:jake.moe@icloud.com">jake.moe@icloud.com</a></p>
+    </div>
+
+    <!-- Englisch -->
+    <div id="en" class="hidden">
+      <h1>Privacy Policy</h1>
+      <h3>Room Bloom</h3>
+      <p>Effective Date: May 4, 2025</p>
+
+      <h2>1. Introduction</h2>
+      <p>We respect your privacy. This Privacy Policy explains how we collect, use, and share your personal information when you use our app.</p>
+
+      <h2>2. Information We Collect</h2>
+      <ul>
+        <li>Device information (model, OS version)</li>
+        <li>App usage data (crash logs, interactions)</li>
+        <li>Any optional data you provide, such as through feedback forms</li>
+      </ul>
+
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the information to improve app performance, fix bugs, and understand how users interact with the app. We do not sell or share your data with third parties.</p>
+
+      <h2>4. Data Security</h2>
+      <p>We take reasonable measures to protect your data, including encryption and secure transmission.</p>
+
+      <h2>5. Your Rights</h2>
+      <p>You may request to access, update, or delete your data at any time by contacting us.</p>
+
+      <h2>6. Contact Us</h2>
+      <p>If you have questions or concerns, contact us at: <a href="mailto:jake.moe@icloud.com">jake.moe@icloud.com</a></p>
+    </div>
   </div>
+
+  <script>
+    function toggleLanguage() {
+      const de = document.getElementById('de');
+      const en = document.getElementById('en');
+      const btn = document.querySelector('.lang-toggle');
+
+      if (de.classList.contains('hidden')) {
+        de.classList.remove('hidden');
+        en.classList.add('hidden');
+        btn.textContent = 'Switch to English';
+        document.documentElement.lang = 'de';
+        document.title = 'Datenschutzerklärung – Room Bloom';
+      } else {
+        de.classList.add('hidden');
+        en.classList.remove('hidden');
+        btn.textContent = 'Wechsle zu Deutsch';
+        document.documentElement.lang = 'en';
+        document.title = 'Privacy Policy – Room Bloom';
+      }
+    }
+  </script>
 </body>
 </html>
